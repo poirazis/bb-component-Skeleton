@@ -71,16 +71,22 @@ const hash = () => ({
 // Custom plugin to bundle up our files after building
 const bundle = () => ({
   name: "bundle",
-  apply: "build",
   async writeBundle() {
+    // Add a small delay to ensure all files are fully written before tarring
+    await new Promise((resolve) => setTimeout(resolve, 100));
+
     const bundleName = `${pkg.name}-${pkg.version}.tar.gz`;
-    return tar
-      .c({ gzip: true, cwd: "dist" }, [
-        "plugin.min.js",
-        "schema.json",
-        "package.json",
-      ])
-      .pipe(createWriteStream(`dist/${bundleName}`));
+    return new Promise((resolve, reject) => {
+      tar
+        .c({ gzip: true, cwd: "dist" }, [
+          "plugin.min.js",
+          "schema.json",
+          "package.json",
+        ])
+        .pipe(createWriteStream(`dist/${bundleName}`))
+        .on("finish", resolve)
+        .on("error", reject);
+    });
   },
 });
 

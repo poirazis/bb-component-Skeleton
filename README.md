@@ -19,9 +19,11 @@ This template provides everything you need to create and publish a production-re
 ### 1. Clone or Use as Template
 
 **Option A: Use GitHub Template** (recommended)
+
 - Click "Use this template" on GitHub to create your own repository
 
 **Option B: Clone**
+
 ```bash
 git clone https://github.com/poirazis/bb-component-Skeleton.git my-component
 cd my-component
@@ -49,6 +51,7 @@ bun run build
 ```
 
 Output will be in `dist/`:
+
 - `plugin.min.js` - Your minified component
 - `schema.json` - Component metadata and settings
 - `bb-component-YourName-1.0.0.tar.gz` - Ready to deploy to Budibase
@@ -103,7 +106,7 @@ Your `Component.svelte` file should follow this pattern:
 
   // Component state with Svelte 5 runes
   let myValue: string = $state("");
-  
+
   // Props from schema
   let { label }: { label?: string } = $props();
 </script>
@@ -203,4 +206,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on improving this template
 ## License
 
 MIT - See LICENSE file for details
-

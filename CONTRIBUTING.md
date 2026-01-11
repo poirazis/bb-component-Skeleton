@@ -13,17 +13,20 @@ Thank you for your interest in improving this template! This document provides g
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/poirazis/bb-component-Skeleton.git
    cd bb-component-Skeleton
    ```
 
 2. **Install dependencies**
+
    ```bash
    bun install
    ```
 
 3. **Start development with watch mode**
+
    ```bash
    bun run watch
    ```
@@ -83,6 +86,7 @@ The build process validates your schema using `@budibase/backend-core`. If valid
 ## Pull Request Process
 
 1. **Create a feature branch**
+
    ```bash
    git checkout -b feature/your-feature
    ```
@@ -90,6 +94,7 @@ The build process validates your schema using `@budibase/backend-core`. If valid
 2. **Make your changes** and test thoroughly
 
 3. **Commit and push**
+
    ```bash
    git add .
    git commit -m "feat: your descriptive message"
@@ -97,6 +102,7 @@ The build process validates your schema using `@budibase/backend-core`. If valid
    ```
 
 4. **Create a pull request** on GitHub with:
+
    - Clear description of changes
    - Reason for changes
    - Testing information
