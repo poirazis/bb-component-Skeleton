@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "bb-component-Skeleton",
+  "version": "1.0.0",
+  "description": "The skeleton of a Super Component",
+  "license": "MIT",
+  "svelte": "index.js",
+  "module": "dist/plugin.min.js",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch"
+  },
+  "devDependencies": {
+    "@budibase/backend-core": "^2.8.0",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
+    "postcss": "^8.5.6",
+    "svelte": "^5.0.0",
+    "tar": "^6.2.1",
+    "terser": "^5.33.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.10"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  }
+}

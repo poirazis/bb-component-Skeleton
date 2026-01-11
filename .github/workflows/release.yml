@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+      - name: Make the production plugin bundle
+        run: |
+          release_version=$(cat package.json | jq -r '.version')
+          echo "RELEASE_VERSION=$release_version" >> $GITHUB_ENV
+          bun install
+          bun run build
+      - name: Perform Github Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: v${{ env.RELEASE_VERSION }}
+          tag_name: v${{ env.RELEASE_VERSION }}
+          generate_release_notes: true
+          files: |
+            dist/*.tar.gz
