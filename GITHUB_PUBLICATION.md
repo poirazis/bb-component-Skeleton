@@ -6,6 +6,7 @@ The repository is now **fully prepared and committed locally**. Follow these ste
 
 1. Go to https://github.com/new
 2. Fill in the following:
+
    - **Repository name**: `bb-component-Skeleton`
    - **Description**: `A modern Svelte 5 template for building Budibase custom components`
    - **Visibility**: **Public**
@@ -45,7 +46,7 @@ This enables the "Use this template" button for users.
 5. Under "Default branch", select `develop`
 6. Confirm the change
 
-*Note: This allows development to happen on `develop` with releases to `main`*
+_Note: This allows development to happen on `develop` with releases to `main`_
 
 ## Step 5: Configure GitHub Actions
 
@@ -87,7 +88,7 @@ To host documentation:
 ✅ **Complete Structure** - All necessary files for a production Budibase component  
 ✅ **Simplified Component** - Click counter example with minimal boilerplate  
 ✅ **Schema Validation** - Proper metadata and settings configuration  
-✅ **TypeScript Support** - Full type safety with Svelte 5  
+✅ **TypeScript Support** - Full type safety with Svelte 5
 
 ## Usage
 
