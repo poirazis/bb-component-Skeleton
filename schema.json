@@ -7,7 +7,7 @@
     "name": "bb-component-Skeleton",
     "friendlyName": "Click Counter",
     "description": "A simple button that increments a counter on click",
-    "icon": "Click",
+    "icon": "lightbulb",
     "styles": ["size", "padding", "background", "border"],
     "settings": [
       {
