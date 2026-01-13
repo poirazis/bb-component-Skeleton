@@ -8,6 +8,7 @@
     "friendlyName": "Click Counter",
     "description": "A simple button that increments a counter on click",
     "icon": "Click",
+    "styles": ["size", "padding", "background", "border"],
     "settings": [
       {
         "type": "text",
