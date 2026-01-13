@@ -1,36 +1,25 @@
 <script lang="ts">
   import { getContext } from "svelte";
 
-  interface SDKContext {
-    styleable: (node: HTMLElement, styles: any) => void;
-  }
-
-  interface ComponentContext {
-    styles: any;
-  }
-
-  const sdk = getContext<SDKContext>("sdk");
-  const componentContext = getContext<ComponentContext>("component");
-
-  const { styleable } = sdk;
+  const { styleable } = getContext("sdk");
+  const component = getContext("component");
 
   let count: number = $state(0);
   let { buttonLabel }: { buttonLabel?: string } = $props();
 </script>
 
-<div use:styleable={componentContext.styles}>
+<div class="super-wrapper" use:styleable={$component.styles}>
   <button onclick={() => count++}>
     {buttonLabel || "Click me"} ({count})
   </button>
 </div>
 
 <style>
-  div {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    display: inline-block;
+  .super-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
   button {
     padding: 0.75rem 1.5rem;
     background-color: #007bff;
