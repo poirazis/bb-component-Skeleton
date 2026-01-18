@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "bb-component-Skeleton",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The skeleton of a Super Component",
   "packageManager": "bun@1.0.0",
   "license": "MIT",
